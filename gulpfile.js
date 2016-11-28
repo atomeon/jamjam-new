@@ -28,11 +28,11 @@ gulp.task('sass', function () {
         .pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task('browser-sync', function () {
-    browserSync.init({
-        proxy: "http://jam2.dev:8888/"
-    });
-});
+// gulp.task('browser-sync', function () {
+//     browserSync.init({
+//         proxy: "http://jam2.dev:8888/"
+//     });
+// });
 
 gulp.task('js', function (cb) {
     pump([
@@ -56,9 +56,9 @@ gulp.task('compress-sass', ['sass'], function () {
 gulp.task('serve', ['sass', 'js', 'compress-sass'], function () {
 
 
-    browserSync.init({
-        proxy: "http://jam2.dev:8888/"
-    });
+    // browserSync.init({
+    //     proxy: "http://jam2.dev:8888/"
+    // });
 
     gulp.watch(['scss/**/*.scss'], ['sass', 'compress-sass']);
     gulp.watch(['../css/*.css']).on('change', browserSync.reload);
