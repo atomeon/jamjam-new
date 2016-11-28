@@ -3,6 +3,7 @@
     // top: 50%;
     
     transform: translate(99%, 0);
+    
 
     // right: -99%;
     // position: fixed;
@@ -21,8 +22,12 @@
     }
    
 }
+.opacity-zero {
+    opacity: 0;
+}
 
 .basket__iSopen {
+    opacity: 1;
     transform: translate(0%, 0);
     @include breakpoint(medium) {
         transform: translate(-1%, 0);
@@ -128,6 +133,7 @@
 }
 
 .basket__close {
+    cursor: pointer;
     position: absolute;
     height: 45px;
     width: 30px;

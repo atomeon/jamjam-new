@@ -67,9 +67,9 @@ gulp.task('serve', ['sass', 'js', 'compress-sass'], function () {
     //     proxy: "http://jam2.dev:8888/"
     // });
 
-    gulp.watch(['scss/**/*.scss'], ['sass', 'compress-sass']);
-    gulp.watch(['../css/*.css']).on('change', browserSync.reload);
-    gulp.watch(['../js/app/*.js'], ['js']);
+    gulp.watch(['src/scss/**/*.scss'], ['sass', 'compress-sass']);
+    gulp.watch(['src/css/*.css']).on('change', browserSync.reload);
+    gulp.watch(['src/js/*.js'], ['js']);
     gulp.watch(['../js/*.js']).on('change', browserSync.reload);
     gulp.watch(["../*.html"]).on('change', browserSync.reload);
 });

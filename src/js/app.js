@@ -11,6 +11,7 @@ $(document).ready(function () {
     });
 
     $('.basket__close, .offer__desk-btn').click(function (e) {
+        $('#basket').removeClass('opacity-zero');
         $('#basket').toggleClass('basket__iSopen');
         if ($(window).innerWidth() < 768) {
             $('#basket').toggleClass('basket-closed-scrolls');
