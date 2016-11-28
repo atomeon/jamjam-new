@@ -36,7 +36,14 @@ gulp.task('sass', function () {
 
 gulp.task('js', function (cb) {
     pump([
-        gulp.src('src/js/*.js'),
+        // gulp.src('src/js/*.js'),
+        gulp.src([
+            'src/js/jquery.js',
+            'src/js/foundation.js',
+            'src/js/jquery.validate.js',
+            'src/js/what-input.js',
+            'src/js/app.js'
+            ]),
         concat('app.js'),
         uglify(),
         rename({ suffix: '.min' }),
