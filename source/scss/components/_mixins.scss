@@ -1,0 +1,150 @@
+@mixin grayscale_element($value) {
+    -webkit-filter: #{"grayscale(#{$value})"};
+    -moz-filter: #{"grayscale(#{$value})"};
+    filter:#{"grayscale(#{$value})"};
+}
+
+.grayscale {
+    @include grayscale_element(100%);
+    transition: all 200ms ease-in-out;
+    // &:hover {
+    //     @include grayscale_element(0);
+    // }
+}
+
+
+// Миксины для анимации по наведению на Interattiva в футере
+
+@mixin hardwareAccel() {
+	// Improve performance on mobile/tablet devices
+	@include prefixed(transform, translateZ(0));
+}
+
+@mixin improveAntiAlias() {
+	// Improve aliasing on mobile/tablet devices
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+@mixin fontSmooth() {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin forceBlockLevel() {
+	// Transforms need to be block-level to work
+	display: inline-block;
+	vertical-align: middle;
+}
+
+@mixin hacks() {
+	@include forceBlockLevel();
+	@include hardwareAccel();
+	@include improveAntiAlias();
+	@include fontSmooth();
+}
+
+@mixin prefixed($property, $value) {
+  @if $webkit == true {
+    -webkit-#{$property}: #{$value};
+  }
+
+  @if $moz == true {
+    -moz-#{$property}: #{$value};
+  }
+
+  @if $ms == true {
+    -ms-#{$property}: #{$value};
+  }
+
+  @if $o == true {
+    -o-#{$property}: #{$value};
+  }
+
+  #{$property}: #{$value};
+}
+
+// prefix keyframes
+@mixin keyframes($name) {
+  @if $webkit == true {
+    @-webkit-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @if $moz == true {
+    @-moz-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @if $ms == true {
+    @-ms-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @if $o == true {
+    @-o-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+
+$nameSpace: 'hvr' !default;
+
+// Durations
+$fastDuration: .1s !default;
+$mediumDuration: .3s !default;
+$slowDuration: .5s !default;
+
+// Browser Prefixes - Which CSS prefixes should be used?
+$webkit: true !default;
+$moz: false !default;
+$ms: false !default;
+$o: false !default;
+
+// Compile with or without classes
+$includeClasses: true !default;
+
+
+
+@mixin float-shadow {
+	// @include hacks();
+	// position: relative;
+	// @include prefixed(transition-duration, $mediumDuration);
+	// @include prefixed(transition-property, transform);
+  @include prefixed(transform, translateY(-10px)); /* move the element up by 5px */
+
+	&:before {
+	  // pointer-events: none;
+	  // position: absolute;
+	  // z-index: -1;
+	  // content: '';
+	  // top: 100%;
+	  // left: 5%;
+	  // height: 10px;
+	  // width: 90%;
+	  // opacity: 0;
+	  // background: -webkit-radial-gradient(center, ellipse, rgba(0,0,0,.35) 0%, rgba(0, 0, 0, 0) 80%);
+	  // background: radial-gradient(ellipse at center, rgba(0,0,0,.35) 0%,rgba(0,0,0,0) 80%); /* W3C */
+		// @include prefixed(transition-duration, $mediumDuration);
+		// @include prefixed(transition-property, "transform, opacity");
+    opacity: 1;
+		@include prefixed(transform, translateY(10px)); /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+
+		&:before {
+			
+		}
+	}
+}

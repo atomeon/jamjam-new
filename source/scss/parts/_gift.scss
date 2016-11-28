@@ -1,0 +1,98 @@
+.gift {
+    padding: 180px 0 200px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.gift__steampipe {
+    img {
+        top: 40%;
+        left: -101px;
+        transform: rotate(180deg);
+    }
+}
+
+.gift__ball {
+    position: absolute;
+    top: -30px;
+    left: 80%;
+    margin-right: 10px;
+    max-height: 300px;
+}
+
+.steamcollectors {
+    position: absolute;
+    bottom: 0;
+    right: 60px;
+    width: 240px;
+}
+
+.gift__info {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+    color: #f3e1a4;
+}
+
+.gift__title {
+    font-size: 22px;
+    line-height: 30px;
+    @include breakpoint(medium) {
+            font-size: 45px;
+            line-height: 50px;
+    }
+    @include breakpoint(large) {
+        font-size: 72px;
+        line-height: 80px;
+    }
+}
+
+.gift__hastag {
+    font-size: 45px;
+    margin-bottom: 20px;
+
+    font-size: 20px;
+    line-height: 25px;
+    @include breakpoint(medium) {
+            font-size: 30px;
+            line-height: 35px;
+    }
+    @include breakpoint(large) {
+        font-size: 45px;
+        margin-bottom: 40px;
+        line-height: 55px;
+    }
+}
+
+.gift__condition {
+    p {
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 20px;
+
+        @include breakpoint(medium) {
+            font-size: 16px;
+        }
+    }
+    a {
+        color: #f3e1a4;
+        text-decoration: underline;
+    }
+    margin-bottom: 50px
+}
+
+.gift__share {
+    display: inline-block;
+    color: #f3e1a4;
+    background: #3c5b97;
+
+    text-transform: uppercase;
+    padding: 10px 30px;
+    font-size: 22px;
+
+    img {
+        margin-right: 20px;
+    }
+    
+}
