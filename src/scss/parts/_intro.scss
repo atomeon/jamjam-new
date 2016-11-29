@@ -16,9 +16,10 @@
     text-align: center;
 
     img {
-        width: 100%;
+        // width: 100%;
         max-height: 259px;
         max-width: 314px;
+        max-width: 80%;
 
         @media screen and (max-height: 500px) {
             max-width: 200px;
@@ -29,8 +30,7 @@
 
 
 .intro__steampipe {
-    img {
-
+    div {
         &:nth-child(1) {
             top: -100px;
             left: -51px;
@@ -45,7 +45,7 @@
                 display: block;
             }
             top: 33%;
-            right: -15px;
+            right: -80px;
         }
     }
 }
@@ -63,6 +63,7 @@
         @media screen and (max-height: 500px) {
             max-width: 55px;
         }
+        width: 80%;
     }
 }
 
@@ -101,7 +102,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -35%);
     text-transform: uppercase;
     width: 100%;
     p {
@@ -119,8 +120,8 @@
             line-height: 50px;
         }
         @include breakpoint(large) {
-            font-size: 52px;
-            line-height: 64px;
+            // font-size: 52px;
+            // line-height: 64px;
         }
         margin: 0;
         

@@ -12,7 +12,7 @@
 }
 
 .offer__steampipe {
-    img {
+    div {
         &:nth-child(1){
             top: 40%;
             left: -101px;
@@ -72,6 +72,10 @@
     background: #d6bd95;
     border-radius: 5px;
     color: #a62c2c;
+    
+    @include breakpoint(large) {
+        flex-basis: 350px;
+    }
 
     input {
         margin: 0;
@@ -95,17 +99,24 @@
 .offer__desk-title {
     font-size: 14px;
     line-height: 16px;
-    
     margin-bottom: 20px;
+    
+    @include breakpoint(large) {
+        font-size: 16px;
+        line-height: 18px;
+    }
 }
 
 .offer__desk-info {
     font-size: 14px;
     line-height: 16px;
-    
     color: #3e3e3e;
-
     margin-bottom: 15px;
+
+    @include breakpoint(large) {
+        font-size: 16px;
+        line-height: 18px;
+    }
 }
 
 .offer__desk-quantity {

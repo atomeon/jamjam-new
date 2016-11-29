@@ -152,11 +152,26 @@ section {
     @include breakpoint(small only) {
         display: none;
     }
-    img {
+    div {
         position: absolute;
         z-index: -1;
+        @include breakpoint(large) {
+            max-width: 12%;
+        }
+
+        img {
+            &:nth-child(2) {
+                width: 39px;
+                position: absolute;
+                top: 41.9%;
+                left: 5.7%;
+                animation:spin 4s linear infinite;
+            }
+        }
     }
 }
+
+@keyframes spin { 100% { transform:rotate(360deg); } }
 
 footer {
     background: #e7cca0;
@@ -171,6 +186,12 @@ footer {
         font-size: 40px;
         line-height: 50px;
     }
+
+    @include breakpoint(large) {
+        line-height: 90px;
+        font-size: 72px;
+    }
+
     @include breakpoint(xlarge) {
         line-height: 90px;
         font-size: 78px;
@@ -180,7 +201,7 @@ footer {
     
     text-align: center;
     text-transform: uppercase;
-    
+
     
 }
 
