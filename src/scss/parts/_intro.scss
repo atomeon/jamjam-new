@@ -33,7 +33,7 @@
     div {
         &:nth-child(1) {
             top: -100px;
-            left: -51px;
+            left: -70px;
             transform: rotate(180deg);
             @include breakpoint(large) {
                 top: -30px;
@@ -45,7 +45,7 @@
                 display: block;
             }
             top: 33%;
-            right: -80px;
+            right: -90px;
         }
     }
 }
@@ -85,14 +85,24 @@
 }
 
 @keyframes barrelman-walking {
-  0%   { left: 110%; }
-  100% { left: -30%; 
-    @include breakpoint(medium) {
-    100% { left: -10%; }
-    }
-  }
-  
+  0%   { left: 102%; }
+  100% { left: -30%; }
 }
+
+@include breakpoint(medium) {
+    @keyframes barrelman-walking {
+        0%   { left: 102%; }
+        100% { left: -15%; }
+    }
+}
+
+@include breakpoint(large) {
+    @keyframes barrelman-walking {
+        0%   { left: 102%; }
+        100% { left: -6%; }
+    }
+}
+
 
 .intro__text {
     

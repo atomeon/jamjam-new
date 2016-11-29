@@ -118,6 +118,11 @@ body {
     bottom: 0;
     width: 1400px;
     z-index: -5;
+
+    // height: 40px;
+    // background-image: url('/img/separator.png');
+    // background-repeat: repeat-x;
+
     @include clearfix;
     div {
         height: 40px;
@@ -156,16 +161,22 @@ section {
         position: absolute;
         z-index: -1;
         @include breakpoint(large) {
-            max-width: 12%;
+            // max-width: 12%;
         }
 
         img {
             &:nth-child(2) {
                 width: 39px;
                 position: absolute;
-                top: 41.9%;
-                left: 5.7%;
                 animation:spin 4s linear infinite;
+                @include breakpoint(medium) {
+                    top: 42.1%;
+                    left: 6.7%;
+                }
+                // @include breakpoint(large) {
+                //     top: 41.9%;
+                //     left: 5.7%;
+                // }
             }
         }
     }
