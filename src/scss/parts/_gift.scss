@@ -16,8 +16,13 @@
     position: absolute;
     top: -30px;
     left: 80%;
+
+    @include breakpoint(large) {
+        left: 85%;
+    }
     margin-right: 10px;
     max-height: 300px;
+    width: 120px;
 }
 
 .steamcollectors {

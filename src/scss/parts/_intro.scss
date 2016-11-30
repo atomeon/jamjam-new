@@ -115,25 +115,33 @@
     transform: translate(-50%, -35%);
     text-transform: uppercase;
     width: 100%;
+    @include breakpoint(medium) {
+        width: 95%;
+    }
+    @include breakpoint(large) {
+        width: 70%;
+    }
     p {
+        &:first-child {
+            font-size: 22px;
+            line-height: 30px;
 
-        // @include breakpoint(small only) {
-        //     font-size: 22px;
-        //     line-height: 30px;
-        // }
+            @include breakpoint(medium) {
+                font-size: 45px;
+                line-height: 50px;
+            }
+            @include breakpoint(large) {
+                // font-size: 52px;
+                // line-height: 64px;
+            }
+            margin: 0;
+        }
 
-        font-size: 22px;
-        line-height: 30px;
+        font-size: 14px;
 
         @include breakpoint(medium) {
-            font-size: 45px;
-            line-height: 50px;
+            font-size: 20px;
         }
-        @include breakpoint(large) {
-            // font-size: 52px;
-            // line-height: 64px;
-        }
-        margin: 0;
         
     }
 }

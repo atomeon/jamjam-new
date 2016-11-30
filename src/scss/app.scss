@@ -200,13 +200,13 @@ footer {
 
     @include breakpoint(large) {
         line-height: 90px;
-        font-size: 72px;
+        font-size: 65px;
     }
 
-    @include breakpoint(xlarge) {
-        line-height: 90px;
-        font-size: 78px;
-    }
+    // @include breakpoint(xlarge) {
+    //     line-height: 90px;
+    //     font-size: 78px;
+    // }
     
     color: #a18353;
     

@@ -6,7 +6,7 @@
     }
 
     @include breakpoint(large) {
-        padding: 90px 200px 120px;
+        padding: 90px 150px 120px;
     }
     
 }
@@ -67,14 +67,14 @@
     @include breakpoint(medium) {
         flex-shrink: 0;
     }
-    flex-basis: 300px;
+    flex-basis: 290px;
     padding: 19px;
     background: #d6bd95;
     border-radius: 5px;
     color: #a62c2c;
     
     @include breakpoint(large) {
-        flex-basis: 350px;
+        flex-basis: 310px;
     }
 
     input {
@@ -94,8 +94,8 @@
 }
 
 .offer__desk-price {
-    font-size: 26px;
-    margin-bottom: 15px;
+    font-size: 24px;
+    margin-bottom: 13px;
 }
 
 .offer__desk-title {
@@ -104,14 +104,14 @@
     margin-bottom: 20px;
     
     @include breakpoint(large) {
-        font-size: 16px;
-        line-height: 18px;
+        font-size: 15px;
+        line-height: 17px;
     }
 }
 
 .offer__desk-info {
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 15px;
+    line-height: 17px;
     color: #3e3e3e;
     margin-bottom: 15px;
 
