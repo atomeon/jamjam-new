@@ -190,7 +190,7 @@ footer {
 
 .footer-wrapper {
     opacity: .5;
-    padding: 20px 0;
+    padding: 20px 10px;
         font-size: 30px;
     @include breakpoint(medium) {   
         padding: 20px 40px;
@@ -213,7 +213,21 @@ footer {
     text-align: center;
     text-transform: uppercase;
 
-    
+    p {
+
+        font-size: 20px;
+        line-height: 30px;
+        @include breakpoint(medium) {
+            font-size: 25px;
+            line-height: 39px;
+
+        }
+        margin: 0;
+
+        @include breakpoint(large) {
+            font-size: 39px;
+        }
+    }
 }
 
 @import 'parts/intro';
