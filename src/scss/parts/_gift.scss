@@ -47,8 +47,10 @@
             line-height: 50px;
     }
     @include breakpoint(large) {
-        font-size: 72px;
-        line-height: 80px;
+        // font-size: 72px;
+        // line-height: 80px;
+        font-size: 62px;
+        line-height: 70px;
     }
 }
 
