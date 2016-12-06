@@ -6,11 +6,18 @@ var pump = require('pump');
 var concat = require('gulp-concat')
 var rename = require("gulp-rename");
 var minify = require('gulp-clean-css');
+var imagemin = require('gulp-imagemin');
 
 var sassPaths = [
     'bower_components/foundation-sites/scss',
     'bower_components/motion-ui/src'
 ];
+
+gulp.task('imagemin', () =>
+    gulp.src('src/images/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/img'))
+);
 
 gulp.task('sass', function () {
     return gulp.src('src/scss/app.scss')
@@ -60,7 +67,7 @@ gulp.task('compress-sass', ['sass'], function () {
         .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('serve', ['sass', 'js', 'compress-sass'], function () {
+gulp.task('serve', ['imagemin', 'sass', 'js', 'compress-sass'], function () {
 
 
     // browserSync.init({
