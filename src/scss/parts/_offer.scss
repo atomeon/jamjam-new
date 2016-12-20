@@ -51,6 +51,8 @@
 
 
 .offer__desk {
+    display: flex;
+    flex-direction: column;
     
     margin-bottom: 20px;
     @include breakpoint(medium) {
@@ -90,10 +92,10 @@
     background-position: center center;
     background-repeat: no-repeat;
     margin-bottom: 15px;
-    
 }
 
 .offer__desk-price {
+    margin-top: 15px;
     font-size: 24px;
     margin-bottom: 13px;
 }
@@ -114,6 +116,7 @@
     line-height: 17px;
     color: #3e3e3e;
     margin-bottom: 15px;
+    margin-bottom: auto;
 
     @include breakpoint(large) {
         font-size: 16px;

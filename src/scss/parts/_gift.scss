@@ -15,7 +15,11 @@
 .gift__ball {
     position: absolute;
     top: -30px;
-    left: 80%;
+    left: 60%;
+
+    @include breakpoint(medium) {
+        left: 80%;
+    }
 
     @include breakpoint(large) {
         left: 85%;
